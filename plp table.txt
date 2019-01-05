@@ -1,0 +1,47 @@
+1.create table User_Role(user_name varchar2(20),
+                      password varchar2(20),
+                      role_code Number(5), PRIMARYKEY(user_name));
+
+
+2.create table Accounts(Account_number Number(10) Primary Key,
+                      Insured_Name varchar2(30),
+                      Insured_street varchar2(40),
+                      Insured_city varchar2(15),
+                      Insured_state  varchar2(40),
+	              Insured_Zip  Number(5),
+	 	      Business_Segment varchar2(20));
+			
+
+                      User_name varchar2(20) references User_Role(user_name));
+
+
+3.create table Policy(Policy_Number number(10) Primarykey,
+                      Policy_Premium Number(10)
+                       Account_Number Number(10) references Accounts(Account_number));
+
+
+
+4.create table Policy_Details(Policy_Number number(10),
+                               Question_Id varchar2(20),
+                               Answer varchar2(30));
+
+
+5.CREATE table Business_segement(
+Bus_seg_id VARCHAR2(10),
+Bus_Seg_Seg NUMBER(3),
+Bus_Seg_Name VARCHAR2(20));
+
+6. CREATE TABLE Policy_Questions(
+Pol_Seq_Id VARCHAR2(10),
+//Pol_Ques_Seq 
+Bus_Seg_Id VARCHAR2(10),
+Pol_Ques_Desc VARCHAR(80));
+//(Doubt in this Table)
+
+
+
+
+
+
+
+

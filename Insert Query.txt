@@ -1,0 +1,66 @@
+
+//Vehicle
+insert into policy_questions values(1,11,'1','Vehicle Type','2 wheeler',100,'3 wheeler',200,'4 wheeler',400,'multi axle',700);
+insert into policy_questions values(2,12,'1','Vehicle Condition','new',0,'Minor Damage',50,'Major Damage',200,'Extreme Damage',400);
+insert into policy_questions values(3,13,'1','Daily Travelling Distance','Less than 5 kms',20,'Less than 15 kms',50,'More than 15 and Less than 25 kms',100,'More than 25 kms',700);
+insert into policy_questions values(4,14,'1','Engine CC','Less than 100',20,'Less than 1000',100,'Less than 2000',200,'Less than 5000',400);
+
+//Shop
+insert into policy_questions values(5,21,'2','Shop Type','General Store',200,'Departmental Store',250,'Provisional Store',300,'Super Market',500);
+insert into policy_questions values(6,22,'2','Shop Size','Small',150,'Medium',300,'Large',500,'Mall',700);
+insert into policy_questions values(7,23,'2','Number of fire exits','Single fire exit',500,'Less than 3 fire exit',400,'Less than 5 fire exit',200,'More than 5 fire exit',0);
+insert into policy_questions values(8,24,'2','Asset Theft Limit','Less than 50,000',100,'Less than 1,50,000',250,'Less than 5,00,000',400,'More than 5,00,000',900);
+
+
+//Apartment
+insert into policy_questions values(9,31,'3','Apartment Size','Small',50,'Medium',150,'Pent House',300,'Multi Storied',500);
+insert into policy_questions values(10,32,'3','Build Year','Before 1990',1000,'1990-2000',700,'2000-2010',400,'After 2010',200);
+insert into policy_questions values(11,33,'3','Property Damage','New',50,'Minor Damage',200,'Major Damage',400,'Extreme Damage',600);
+insert into policy_questions values(12,34,'3','Number of fire extinguishers','Less than 1',500,'Less than 3 more than 1',350,'Less than 5 more than 3',200,'More than 5',100);
+
+
+create table policy_Questions(Pol_Ques_Id Number(5) primary key,
+   Pol_Ques_Seq number(3),
+  3  Bus_Seg_id varchar2(10),
+  4  Pol_Ques_Desc varchar2(100),
+  5  Pol_Ques_Ans1 varchar2(50),
+  6  Pol_Ques_Ans1_weightage Number(10),
+  7  Pol_Ques_Ans2 varchar2(50),
+  8  Pol_Ques_Ans2_weightage Number(10),
+  9  Pol_Ques_Ans3 varchar2(50),
+ 10  Pol_Ques_Ans3_weightage Number(10),
+ 11  Pol_Ques_Ans4 varchar2(50),
+ 12  Pol_Ques_Ans4_weightage Number(10),constraint bus_id foreign key(Bus_Seg_id) references Business_Segment(Bus_Seg_id));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+insert into business_segment('1',1000,'Vehicle');

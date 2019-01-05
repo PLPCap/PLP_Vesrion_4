@@ -1,0 +1,36 @@
+create table policy_Questions(Pol_Ques_Id Number(5) primary key,
+Pol_Ques_Seq number(3),
+Bus_Seg_id varchar2(10),
+Pol_Ques_Desc varchar2(100),
+Pol_Ques_Ans1 varchar2(50),
+Pol_Ques_Ans1_weightage Number(10),
+Pol_Ques_Ans2 varchar2(50),
+Pol_Ques_Ans2_weightage Number(10),
+Pol_Ques_Ans3 varchar2(50),
+Pol_Ques_Ans3_weightage Number(10),
+Pol_Ques_Ans4 varchar2(50),
+Pol_Ques_Ans4_weightage Number(10),constraint bus_id foreign key(Bus_Seg_id) references Business_Segment(Bus_Seg_id));
+
+
+
+
+create table Business_Segment(Bus_Seg_id varchar2(10) primary key,
+Bus_Seg_Seq number(3),
+Bus_Seg_Name varchar2(10));
+
+
+
+
+
+ create table policy_Questions(Pol_Ques_Id Number(5) primary key,
+   Pol_Ques_Seq number(3),
+  3  Bus_Seg_id varchar2(10),
+  4  Pol_Ques_Desc varchar2(100),
+  5  Pol_Ques_Ans1 varchar2(50),
+  6  Pol_Ques_Ans1_weightage Number(10),
+  7  Pol_Ques_Ans2 varchar2(50),
+  8  Pol_Ques_Ans2_weightage Number(10),
+  9  Pol_Ques_Ans3 varchar2(50),
+ 10  Pol_Ques_Ans3_weightage Number(10),
+ 11  Pol_Ques_Ans4 varchar2(50),
+ 12  Pol_Ques_Ans4_weightage Number(10),constraint bus_id foreign key(Bus_Seg_id) references Business_Segment(Bus_Seg_id));
